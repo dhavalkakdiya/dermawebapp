@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 import matplotlib.pyplot as plt
-import tensorflow_hub as hub
+
 import tensorflow as tf
 import numpy as np
 from tensorflow import keras
@@ -13,9 +13,9 @@ fig = plt.figure()
 with open("custom.css") as f:
     st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-st.title('Bag Classifier')
+st.title('Dermatology Image Classification Grou 30')
 
-st.markdown("Welcome to this simple web application that classifies bags. The bags are classified into six different classes namely: Backpack, Briefcase, Duffle, Handbag and Purse.")
+st.markdown("Welcome to web application that classifies skin lesions that have been separated into seven categories :  Actinic keratoses, Basal cell carcinoma, Benign keratosis-like lesions , Dermatofibroma, Melanocytic nevi, Vascular lesions, Melanoma")
 
 
 def main():
