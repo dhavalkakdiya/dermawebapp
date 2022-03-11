@@ -47,13 +47,13 @@ def predict(image):
     test_image = preprocessing.image.img_to_array(test_image)
     test_image = test_image / 255.0
     test_image = np.expand_dims(test_image, axis=0)
-    class_names = ['akiec:class 0',
-          'bcc:class 1',
-          'bkl:class 2',
-          'df:class 3',
-          'nv:class 4',
-          'vasc:class 5',
-          'mel:class 6']
+    class_names = ['Actinic keratoses:class 0',
+          'Basal cell carcinoma:class 1 ',
+          'Benign keratosis-like lesions:class 2 ',
+          'Dermatofibroma:class 3 ',
+          'Melanocytic nevi:class 4 ',
+          'Vascular lesions:class 5 ',
+          'Melanoma:class 6 ']
     predictions = model.predict(test_image)
     scores = tf.nn.softmax(predictions[0])
     scores = scores.numpy()
