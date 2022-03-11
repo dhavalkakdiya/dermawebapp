@@ -7,7 +7,7 @@ We are ble to achieve near 75% accuracy using CNN.
 
 
 
-Requirement.txt contains require lib to run this project.
+requirement.txt contains require lib to run this project.
 - pip install -r requirements.txt
 
 To run model on local machine app.py file need to by run using following command.
