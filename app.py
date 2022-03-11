@@ -40,20 +40,20 @@ def main():
 
 
 def predict(image):
-    classifier_model = "derma_model.h5"
+    classifier_model = "derma_best_seq_32x32.h5"
     IMAGE_SHAPE = (28, 28,3)
     model = load_model(classifier_model,compile=False,)
     test_image = image.resize((32,32))
     test_image = preprocessing.image.img_to_array(test_image)
     test_image = test_image / 255.0
     test_image = np.expand_dims(test_image, axis=0)
-    class_names = ['akiec',
-          'bcc',
-          'bkl',
-          'df',
-          'nv',
-          'vasc',
-          'mel']
+    class_names = ['akiec:class 0',
+          'bcc:class 1',
+          'bkl:class 2',
+          'df:class 3',
+          'nv:class 4',
+          'vasc:class 5',
+          'mel:class 6']
     predictions = model.predict(test_image)
     scores = tf.nn.softmax(predictions[0])
     scores = scores.numpy()
